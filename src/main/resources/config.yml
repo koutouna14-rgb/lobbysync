@@ -1,0 +1,23 @@
+# AetherMCLuckPermsSyncLobby - runs on the LOBBY server.
+# Pulls LuckPerms data from the main server (AetherMCLuckPermsSyncMain) and applies it here.
+# Manage permissions on the MAIN server only: changes made on the lobby are overwritten.
+
+# Where AetherMCLuckPermsSyncMain is listening.
+main-host: "127.0.0.1"
+main-port: 25599
+
+# Shared secret. Must be IDENTICAL to AetherMCLuckPermsSyncMain's config.yml.
+key: "CHANGE_ME_TO_A_LONG_RANDOM_STRING"
+
+# How often to re-sync groups and every online player (minimum 30).
+interval-seconds: 60
+
+# HTTP timeout when talking to the main server.
+timeout-ms: 3000
+
+# false = only copy which GROUPS each player is in (recommended; covers AetherMC and AetherTag).
+# true  = also copy permissions set directly on individual players.
+sync-user-permissions: false
+
+# true = delete lobby groups that no longer exist on the main server ("default" is never deleted).
+delete-extra-groups: true

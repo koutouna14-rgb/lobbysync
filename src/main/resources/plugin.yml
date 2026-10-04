@@ -1,0 +1,17 @@
+name: AetherMCLuckPermsSyncLobby
+version: 1.0.0
+main: com.aethermc.luckpermssync.lobby.AetherMCLuckPermsSyncLobby
+api-version: '1.21'
+description: Copies LuckPerms groups and player memberships from the main server (run on the LOBBY)
+author: AetherMC
+depend: [LuckPerms]
+
+commands:
+  lpsync:
+    description: Force a LuckPerms sync from the main server now
+    usage: /lpsync
+
+permissions:
+  aethermcluckpermssync.admin:
+    description: Use /lpsync
+    default: op
